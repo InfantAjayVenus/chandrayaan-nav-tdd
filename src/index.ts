@@ -1,4 +1,4 @@
-enum Direction {
+export enum Direction {
     North = 'N',
     East = 'E',
     South = 'S',
@@ -6,12 +6,12 @@ enum Direction {
     Up = 'U',
     Down = 'D'
 };
-interface CoOrdinates {
+export interface CoOrdinates {
     x: number;
     y: number;
     z: number;
     direction: Direction;
 };
-export function updateMove(): CoOrdinates {
+export function updateMove(initialCoOrdinates?: CoOrdinates): CoOrdinates {
     return { x: 0, y: 0, z: 0, direction: Direction.North }
 }
